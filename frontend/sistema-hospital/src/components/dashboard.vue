@@ -231,6 +231,8 @@ folder_managed
          
       </ul>
    </div>
+
+   
 </aside>
 
 <div class="p-4 sm:ml-64">
@@ -336,6 +338,15 @@ folder_managed
       </div>
    </div> -->
 </div>
+<PiePaginaView></PiePaginaView>
 
-    
+   
     </template>
+ <script>
+ import PiePaginaView from './pie-pagina.vue'
+ export default{
+    components:{
+       PiePaginaView,
+    }
+ }
+ </script>
