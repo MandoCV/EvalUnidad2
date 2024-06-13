@@ -338,7 +338,7 @@ folder_managed
       </div>
    </div> -->
 </div>
-<PiePaginaView></PiePaginaView>
+<PiePaginaView style="position: fixed; bottom: 0; width: 100%;" ></PiePaginaView>
 
    
     </template>
