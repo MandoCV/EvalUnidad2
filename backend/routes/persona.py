@@ -38,13 +38,6 @@ def get_persona(persona_id: int):
             return persona
     raise HTTPException(status_code=404, detail="Persona no encontrada")
 
-@persona.get("/buscar_persona")
-def buscar_persona(nombre: str):
-    resultados = [persona for persona in personas if persona.nombre.lower() == nombre.lower()]
-    if not resultados:
-        raise HTTPException(status_code=404, detail="Persona no encontrada")
-    return resultados
-
 @persona.put("/personas/{persona_id}")
 def update_persona(persona_id: int, datos_personas: ModelPersonas):
     for index, persona in enumerate(personas):
