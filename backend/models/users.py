@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean, DateTime, ForeignKey
+from sqlalchemy import Column, Integer, String, Boolean, DateTime
 from sqlalchemy.dialects.mysql import LONGTEXT
 from sqlalchemy.orm import relationship
 from config.db import Base
@@ -12,4 +12,6 @@ class User(Base):
     created_at = Column(DateTime)
     estatus = Column(Boolean, default=False)
     Id_persona = Column(Integer)
-    #items = relationship("Item", back_populates="owner") Clave Foranea
+
+    # Relación con UsuariosRoles
+    roles = relationship("UsuariosRoles", back_populates="usuario")
